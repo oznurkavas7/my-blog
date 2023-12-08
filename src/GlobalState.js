@@ -27,7 +27,7 @@ export const GlobalProvider = (props) => {
     return (
         <GlobalContext.Provider value={
             {
-                blogData,
+                blogData
             }
         }>
             {props.children}

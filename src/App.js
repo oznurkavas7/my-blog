@@ -12,6 +12,7 @@ function App() {
       <Router>
         <Header></Header>
         <Routes>
+          <Route path="/" element={<AboutPage />}></Route>
           <Route path="/about" element={<AboutPage />}></Route>
           <Route path="/blog" element={<BlogPage  />}></Route>
           <Route path="/blogmore/:id" element={<BlogMorePage />}></Route>

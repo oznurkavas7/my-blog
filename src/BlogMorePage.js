@@ -2,6 +2,7 @@ import { Container } from "@mui/material";
 import React, { } from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import image2 from "./News-Image-3.jpg";
 
 const BlogMorePage = () => {
     let { id } = useParams();
@@ -36,16 +37,12 @@ const BlogMorePage = () => {
         <Container>
             <div>
                 <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{blogMoreData?.title}</h2>
-                <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{blogMoreData?.featured_image ? (
+                <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <img
-                        height={300}
-                        width={600}
+                        style={{ height: 350 }}
                         alt="article header"
-                        src={blogMoreData.featured_image}
-                    />
-                ) : (
-                    ""
-                )}</h2>
+                        src={blogMoreData?.featured_image ? blogMoreData.featured_image : image2}
+                    /></h2>
                 <p>{blogMoreData?.excerpt?.replace(/[^a-zA-Z ]/g, "")}</p>
             </div>
         </Container>

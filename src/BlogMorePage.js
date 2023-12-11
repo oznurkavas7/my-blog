@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container, Paper } from "@mui/material";
 import React, { } from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -36,14 +36,16 @@ const BlogMorePage = () => {
     return (
         <Container>
             <div>
-                <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{blogMoreData?.title}</h2>
-                <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <img
-                        style={{ height: 350 }}
-                        alt="article header"
-                        src={blogMoreData?.featured_image ? blogMoreData.featured_image : image2}
-                    /></h2>
-                <p>{blogMoreData?.excerpt?.replace(/[^a-zA-Z ]/g, "")}</p>
+                <Paper elevation={10} sx={{ backgroundColor: "#EBE0D0", padding: "16px", marginTop: "20px" }}>
+                    <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{blogMoreData?.title}</h2>
+                    <h2 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <img
+                            style={{ height: 350 }}
+                            alt="article header"
+                            src={blogMoreData?.featured_image ? blogMoreData.featured_image : image2}
+                        /></h2>
+                    <p>{blogMoreData?.excerpt?.replace(/[^a-zA-Z ]/g, "")}</p>
+                </Paper>
             </div>
         </Container>
     );

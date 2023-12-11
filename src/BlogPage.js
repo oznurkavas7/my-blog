@@ -16,7 +16,7 @@ const BlogPage = () => {
                         <Grid container justifyContent="center" spacing={2}>
                             {blogData?.posts?.map((item) => (
                                 <Grid key={item.ID} item>
-                                    <Paper  elevation={10} sx={{background: "#EBE0D0", maxWidth: 345, maxHeight: 450, marginTop:"20px" }}>
+                                    <Paper elevation={10} sx={{background: "#EBE0D0", maxWidth: 345, height: "100%", marginTop:"20px" }}>
                                         <CardMedia
                                             component="img"
                                             alt=""
@@ -35,7 +35,7 @@ const BlogPage = () => {
                                             <Link to={"/blogmore/" + item.ID} params={{ id: item.ID }}>
                                                 <div className='align-right'>
                                                     <Button style={{
-                                                        background: "#EC8FD0",
+                                                        background: "#EC8FD0"
                                                     }} size="small" variant="contained">Read More</Button>
                                                 </div>
                                             </Link>

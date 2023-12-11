@@ -15,7 +15,7 @@ const AboutPage = () => {
                 <Grid container spacing={2}>
                     <Grid item xs>
                         <img style={{ width: 300, height: 300, borderRadius: 600 / 2, marginLeft: "50px", marginTop: "20px"}} src={image1} alt="" />
-                        <div style={{ justifyContent: 'center', display: 'flex', marginRight: "50px", marginTop: '20px' }}>
+                        <div style={{ justifyContent: 'center', display: 'flex', marginRight: "70px", marginTop: '20px' }}>
                             <Link to="https://www.linkedin.com/in/%C3%B6znur-kavas-a45467116/" target="_blank" rel="noopener noreferrer" >
                                 <IconButton>
                                     <LinkedInIcon />
